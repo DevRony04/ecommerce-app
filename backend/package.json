@@ -2,6 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
+  "dependencies": {
+  "express": "^4.21.2"
+    },
   "license": "ISC",
   "author": "Deepyaman Mondal",
   "type": "module",
@@ -11,3 +14,5 @@
     "server": "nodemon server.js"
   }
 }
+
+
