@@ -1,6 +1,7 @@
 # 🛍️ Forever – Full-Stack E-Commerce Platform
 
 A **comprehensive e-commerce solution** built with **React.js frontend, Node.js/Express.js backend, and MongoDB database**.  
+
 Designed to deliver **seamless shopping experiences**, with **secure authentication, payment integration, real-time cart updates, and an intuitive admin dashboard** for product & inventory management.
 
 ---
@@ -36,57 +37,66 @@ Designed to deliver **seamless shopping experiences**, with **secure authenticat
 ## 🗂️ Project Structure
 
 forever-ecommerce/
-│── client/ # React.js frontend
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ └── utils/
-│
-│── server/ # Node.js + Express backend
-│ ├── config/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ └── utils/
-│
-│── database/ # MongoDB collections & schema
-│── README.md
+- │── admin/ # Admin panel for product & inventory management
+- │ ├── src/
+- │ │ ├── components/ # Reusable UI components
+- │ │ ├── pages/ # Admin dashboard pages (orders, products, users)
+- │ │ └── utils/ # Helper functions & API integration
+- │
+- │── backend/ # Node.js + Express backend
+- │ ├── config/ # Configuration files (DB, JWT, environment)
+- │ ├── controllers/ # Business logic for handling requests
+-│ ├── middleware/ # Authentication, error handling, logging
+- │ ├── models/ # Mongoose schemas (Users, Products, Orders, Cart)
+- │ ├── routes/ # API endpoints
+- │ └── utils/ # Utility functions (validators, token helpers)
+- │
+- │── frontend/ # React.js customer-facing frontend
+- │ ├── public/ # Static assets
+- │ ├── src/
+- │ │ ├── components/ # UI components (Navbar, Footer, ProductCard, etc.)
+- │ │ ├── pages/ # Pages (Home, Products, Cart, Checkout, Profile)
+- │ │ ├── context/ # React Context for state management (Cart, Auth)
+- │ │ └── utils/ # API calls, helpers
+- │
+- │── .gitignore # Ignored files & folders
+- │── package.json # Project dependencies & scripts
+- │── README.md # Documentation
 
 ## ⚙️ Installation & Setup
 
 1️⃣ **Clone the repository**
 bash
-git clone https://github.com/your-username/forever-ecommerce.git
-cd forever-ecommerce
+- git clone https://github.com/your-username/forever-ecommerce.git
+- cd forever-ecommerce
 
 2️⃣ **Install dependencies**
 
-# Install client dependencies
+- Install client dependencies
 cd client
 npm install
 
-# Install server dependencies
+- Install server dependencies
 cd ../server
 npm install
 
 3️⃣ **Environment Variables**
 Create a .env file in the server/ directory and configure:
 
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-STRIPE_SECRET_KEY=your_stripe_secret_key
+- PORT=5000
+- MONGO_URI=your_mongodb_connection_string
+- JWT_SECRET=your_jwt_secret
+- STRIPE_SECRET_KEY=your_stripe_secret_key
 
 4️⃣ **Run the app**
 
-# Run backend (server)
-cd server
-npm run dev
+**Run backend (server)** ->
+- cd server
+- npm run dev
 
-# Run frontend (client)
-cd ../client
-npm start
+**Run frontend (client)** ->
+- cd ../client
+- npm start
 
 ## 📊 Architecture Overview
 [ React.js (Frontend) ]  <-->  [ Node.js + Express API ]  <-->  [ MongoDB Database ]
